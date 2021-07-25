@@ -1,0 +1,4 @@
+*.img
+*.dmg
+alpine-rpi-*
+alpine-uboot-*

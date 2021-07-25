@@ -1,0 +1,43 @@
+# Keyboard layout and variant
+KEYMAPOPTS="us us"
+
+# Hostname
+HOSTNAMEOPTS="-n ziloo"
+
+# Network interfaces
+INTERFACESOPTS="auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+"
+
+# DNS
+# DNSOPTS="-d local <DNS>"
+DNSOPTS="-n 8.8.8.8"
+
+# Timezone
+TIMEZONEOPTS="-z UTC"
+
+# Proxy
+PROXYOPTS="none"
+
+# Add a random mirror for apk repository
+APKREPOSOPTS="-r"
+
+# Install Dropbear
+# SSHDOPTS="-c dropbear"
+# Install OpenSSH
+SSHDOPTS="-c openssh"
+
+# NTP
+NTPOPTS="-c chrony"
+
+# Setup data disk
+DISKOPTS="-m data /media/mmcblk0p1/data"
+
+# Setup lbu config storage
+LBUOPTS="mmcblk0p1"
+
+# Setup apk cache
+APKCACHEOPTS="/media/mmcblk0p1/cache"

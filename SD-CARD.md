@@ -37,6 +37,38 @@ boot configuration files [extlinux.conf](https://wiki.syslinux.org/wiki/index.ph
 
 https://en.wikipedia.org/wiki/GUID_Partition_Table
 
+Not currently using due to sync risks. Easiest to just use MBR.
+
+
+## Sunxi ARM first run
+
+> diskutil partitionDisk /dev/disk2 MBR FREE GAP 4MB "FAT32" ALPINE 1GB "FAT32" FIRMWARES 2048MB "Free Space" SYS R
+sudo fdisk -e /dev/disk2
+> f 1
+> w
+> exit
+
+Make sure that ALPINE has boot flag set
+
+> tar -xzvf alpine-uboot-3.14.0-armv7.tar -C /Volumes/ALPINE --no-same-owner
+
+https://linux-sunxi.org/Bootable_SD_card
+
+> dd if=alpine-uboot-3.14.0-arm7/u-boot/Bananapi/u-boot-sunxi-with-spl.bin of=/dev/disk2 bs=1024 seek=8
+
+Place the SPL at 8KB and U-Boot at 40KB
+
+
+start	sector	size	usage
+0KB	0	8KB	Unused, available for MBR (partition table etc.)
+8KB	16	32KB	Initial SPL loader
+40KB	80	504KB	U-Boot
+544KB	1088	128KB	environment
+672KB	1344	128KB	Falcon mode boot params
+800KB	1600	-	Falcon mode kernel start
+1024KB	2048	-	Free for partitions
+
+
 
 ## On Mac OS
 

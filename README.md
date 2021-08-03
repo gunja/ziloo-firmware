@@ -20,6 +20,10 @@ For development and debugging use an SD Card or USB stick. It must be partitione
 
 - With MBR FAT32 (diskutil eraseDisk FAT32 ALPINE MBR $(DISK))
 - 1Gb FAT32 boot partition
+- 3.4Gb extFS 4 rootfs partition
+
+An empty SD Card image is generated with `make ziloo-raw-image`, which will generate `ziloo-dev-card.img.zip`.
+
 
 
 ## Alpine based
@@ -46,3 +50,20 @@ The current build doesn't support
 
 - Raspberry Pi 3 running [Alpine Linux](https://alpinelinux.org/downloads/)
 - Generic Arm running [Alpine Linux](https://alpinelinux.org/downloads/)
+
+
+## Add plugins to VSCode
+
+* Docker
+* Python
+* CMake & CMake Tools
+* Docker Explorer
+* Cortex-Debug
+* Remote - Containers
+* Jupyter
+* Better TOML
+
+## Docker
+
+> sudo docker build --target base -t thepia/ziloo-base:v1 .
+> sudo docker images

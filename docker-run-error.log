@@ -1,0 +1,17 @@
+pi@raspberrypi:~/ziloo-firmware $ docker build -t hypriot --target hypriot .
+Sending build context to Docker daemon  161.3kB
+Step 1/6 : FROM alpine:3.13 as base
+ ---> 70b8c9dc24cf
+Step 2/6 : RUN set -x && apk add --no-cache --virtual=.build-dependencies wget ca-certificates
+ ---> Running in 1270bf8c64b1
++ apk add --no-cache '--virtual=.build-dependencies' wget ca-certificates
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.13/main/armv7/APKINDEX.tar.gz
+WARNING: Ignoring https://dl-cdn.alpinelinux.org/alpine/v3.13/main: temporary error (try again later)
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.13/community/armv7/APKINDEX.tar.gz
+WARNING: Ignoring https://dl-cdn.alpinelinux.org/alpine/v3.13/community: temporary error (try again later)
+ERROR: unable to select packages:
+  wget (no such package):
+    required by: .build-dependencies-19700101.000000[wget]
+  ca-certificates (no such package):
+    required by: .build-dependencies-19700101.000000[ca-certificates]
+The command '/bin/sh -c set -x && apk add --no-cache --virtual=.build-dependencies wget ca-certificates' returned a non-zero code: 3

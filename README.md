@@ -46,3 +46,20 @@ The current build doesn't support
 
 - Raspberry Pi 3 running [Alpine Linux](https://alpinelinux.org/downloads/)
 - Generic Arm running [Alpine Linux](https://alpinelinux.org/downloads/)
+
+
+## Add plugins to VSCode
+
+* Docker
+* Python
+* CMake & CMake Tools
+* Docker Explorer
+* Cortex-Debug
+* Remote - Containers
+* Jupyter
+* Better TOML
+
+## Docker
+
+> sudo docker build --target base -t thepia/ziloo-base:v1 .
+> sudo docker images

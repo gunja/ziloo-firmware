@@ -9,6 +9,7 @@ ziloo-runtime: build
 
 ziloo-runtime-vnc: build
 	docker run -d --privileged -p 5900:5900 thepia/ziloo-runtime-x11
+	docker ps
 
 ziloo-runtime-rdp: build
 	docker run -d --name rdp --shm-size 1g -p 3389:3389 thepia/ziloo-runtime

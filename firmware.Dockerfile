@@ -62,7 +62,9 @@ ENV DISPLAY :99
 ENV RESOLUTION 1920x1080x24
 
 # Xfce4 Graphical desktop
-RUN apk add --no-cache x11vnc xfce4 openbox \
+RUN apk add --no-cache \
+    supervisor \
+    x11vnc xfce4 openbox \
     xfce4-terminal \
     xfce4-screensaver \
     lightdm-gtk-greeter \
@@ -71,15 +73,16 @@ RUN apk add --no-cache x11vnc xfce4 openbox \
     && echo "alpine:alpine" | /usr/sbin/chpasswd \
     && echo "alpine    ALL=(ALL) ALL" >> /etc/sudoers
 
+EXPOSE 5900
+
+COPY setup/develop/etc /etc
+COPY setup/dev-entrypoint.sh /usr/bin/docker-entrypoint.sh
+# RUN chmod +x /usr/bin/docker-entrypoint.sh 
+
 USER alpine
 WORKDIR /home/alpine
 
 RUN mkdir -p /home/alpine/.vnc && x11vnc -storepasswd alpine /home/alpine/.vnc/passwd
-
-EXPOSE 5900
-
-ADD setup/develop/etc /etc
-COPY setup/dev-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 CMD ["/usr/bin/supervisord","-c","/etc/supervisor/supervisord.conf"]

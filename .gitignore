@@ -5,3 +5,4 @@ images
 *.img.gz
 alpine-rpi-*
 alpine-uboot-*
+ziloo-dev-card.img.*

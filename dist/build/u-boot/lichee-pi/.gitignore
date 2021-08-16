@@ -1,0 +1,6 @@
+spl/arch
+spl/include
+spl/lib
+*.o
+*.su
+*.cmd

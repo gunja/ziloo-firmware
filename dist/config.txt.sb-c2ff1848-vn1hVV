@@ -1,0 +1,23 @@
+# do not modify this file as it will be overwritten on upgrade.
+# create and/or modify usercfg.txt instead.
+# https://www.raspberrypi.org/documentation/configuration/config-txt
+[pi0]
+kernel=boot/vmlinuz-rpi
+initramfs boot/initramfs-rpi
+[pi0w]
+kernel=boot/vmlinuz-rpi
+initramfs boot/initramfs-rpi
+[pi1]
+kernel=boot/vmlinuz-rpi
+initramfs boot/initramfs-rpi
+[pi2]
+kernel=boot/vmlinuz-rpi2
+initramfs boot/initramfs-rpi2
+[pi3]
+kernel=boot/vmlinuz-rpi2
+initramfs boot/initramfs-rpi2
+[pi3+]
+kernel=boot/vmlinuz-rpi2
+initramfs boot/initramfs-rpi2
+[all]
+include usercfg.txt

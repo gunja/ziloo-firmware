@@ -77,7 +77,7 @@ cp -R /builder/files/* ${BUILD_PATH}/
 # make our build directory the current root
 # and install the Rasberry Pi firmware, kernel packages,
 # docker tools and some customizations
-chroot ${BUILD_PATH} /bin/bash < /scripts/chroot-script.sh
+chroot ${BUILD_PATH} /bin/bash < /boards/chroot-script.sh
 
 # unmount pseudo filesystems
 umount -l ${BUILD_PATH}/dev/pts
@@ -115,4 +115,4 @@ cd ${BUILD_RESULT_PATH} && zip "${HYPRIOT_IMAGE_NAME}.zip" "${HYPRIOT_IMAGE_NAME
 cd ${BUILD_RESULT_PATH} && sha256sum "${HYPRIOT_IMAGE_NAME}.zip" > "${HYPRIOT_IMAGE_NAME}.zip.sha256" && cd -
 
 # test sd-image that we have built
-VERSION=${HYPRIOT_IMAGE_VERSION} rspec --format documentation --color ${BUILD_RESULT_PATH}/scripts/alpine-rpi
+VERSION=${HYPRIOT_IMAGE_VERSION} rspec --format documentation --color ${BUILD_RESULT_PATH}/boards/alpine-rpi

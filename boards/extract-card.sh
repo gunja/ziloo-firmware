@@ -1,0 +1,1 @@
+parted $0 UNIT b print

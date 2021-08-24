@@ -15,19 +15,22 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     gcc-arm* \
     gzip \
     kpartx \
-    flex gperf tar libc6-dev libreadline-dev tofrodos python-markdown libxml2-utils xsltproc  libssl-dev \
+    flex gperf tar libc6-dev libreadline-dev tofrodos libxml2-utils xsltproc libssl-dev \
     lzop libncurses5-dev \
     libyaml-dev pkg-config \
     libusb-dev \
     bc \
+    fdisk \
     gdisk \
     git gnupg \
+    mtools mtd-utils \
     qemu \
     qemu-user-static \
     parted \
     ncurses-base ncurses-bin libncurses5-dev dialog \
+    python3 python3-dev python3-markdown python3-distutils python3-pip \
     squashfs-tools \
-    swig python3 python3-dev python python3-distutils python3-pip \
+    swig python \
     u-boot-tools \
     unzip \
     xxd \
@@ -39,9 +42,12 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 RUN gem update --system && \
     gem install --no-document serverspec
 
-RUN pip3 install setup-tools
+# RUN pip3 install setup-tools
 
-COPY scripts /scripts/
+
+COPY boards /boards/
+
+RUN /boards/install-genimage.sh
 
 # build sd card image
 # CMD /builder/build.sh

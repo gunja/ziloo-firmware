@@ -21,6 +21,9 @@ ziloo-raw-image:
 maix-sdk-image:
 	docker run --rm --privileged -v $(shell pwd):/workspace ziloo/image-builder /workspace/boards/maix/maix-sdk-card.sh
 
+maix-original-image:
+	docker run --rm --privileged -v $(shell pwd):/workspace ziloo/image-builder /workspace/boards/maix-original/maix-original-card.sh
+
 shell: build-builder
 	docker run --rm -ti --privileged -v $(shell pwd):/workspace ziloo/image-builder bash
 

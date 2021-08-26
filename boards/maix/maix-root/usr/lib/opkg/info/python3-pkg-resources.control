@@ -1,0 +1,11 @@
+Package: python3-pkg-resources
+Version: 47.1.0-1
+Depends: libc, python3
+Source: package/lang/python/python3
+License: Python/2.0
+LicenseFiles: LICENSE Doc/copyright.rst Doc/license.rst Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi_osx/LICENSE Modules/expat/COPYING
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>, Jeffery To <jeffery.to@gmail.com>
+Architecture: sunxi
+Installed-Size: 146387
+Description:  Python 3.8 pkg_resources module (part of setuptools)

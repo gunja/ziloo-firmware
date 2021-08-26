@@ -1,0 +1,10 @@
+Package: kmod-spi-dev
+Version: 4.9.118-1
+Depends: kernel (=4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb)
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Status: unknown hold not-installed
+Architecture: sunxi
+Installed-Size: 188
+Description:  This package contains the user mode SPI device driver

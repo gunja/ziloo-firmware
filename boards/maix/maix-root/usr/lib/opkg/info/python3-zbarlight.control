@@ -1,0 +1,8 @@
+Package: python3-zbarlight
+Version: 3.0-1
+Depends: libc, libzbar, python3-light
+Source: package/lang/python/python-zbarlight
+Section: lang
+Architecture: sunxi
+Installed-Size: 7700
+Description:  zbarlight is a simple wrapper for the zbar library. For now, it can read all zbar supported codes. Contributions, suggestions and pull requests are welcome.

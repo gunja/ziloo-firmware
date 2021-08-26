@@ -1,0 +1,11 @@
+Package: icu
+Version: 55.2-1
+Depends: libc, libstdcpp, libpthread
+Source: package/libs/icu
+License: ICU-1.8.1+
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Hirokazu MORIKAWA <morikw2@gmail.com>
+Architecture: sunxi
+Installed-Size: 11587526
+Description:  International Components for Unicode

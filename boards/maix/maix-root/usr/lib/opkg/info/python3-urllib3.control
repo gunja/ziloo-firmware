@@ -1,0 +1,11 @@
+Package: python3-urllib3
+Version: 1.25.10-1
+Depends: libc, python3
+Source: package/lang/python/python-urllib3
+License: MIT
+LicenseFiles: LICENSE.txt
+Section: lang
+Maintainer: Josef Schlehofer <pepe.schlehofer@gmail.com>
+Architecture: sunxi
+Installed-Size: 128148
+Description:  HTTP library with thread-safe connection pooling, file post, and more.

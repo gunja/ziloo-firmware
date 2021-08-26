@@ -1,0 +1,8 @@
+Package: libzbar
+Version: 0.10
+Depends: libc
+Source: package/libs/zbar
+Section: libs
+Architecture: sunxi
+Installed-Size: 61296
+Description:  This is an open source QR code identification Library

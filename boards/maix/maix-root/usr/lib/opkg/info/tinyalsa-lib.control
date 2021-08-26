@@ -1,0 +1,10 @@
+Package: tinyalsa-lib
+Version: 1.1.1-34ffa583936aeb6938636c9c0a26a322b69b0d26
+Depends: libc
+Source: package/libs/tinyalsa
+Section: libs
+Architecture: sunxi
+Installed-Size: 9437
+Description:  TinyALSA is a small library to interface with ALSA in the Linux kernel.
+ It provides a basic pcm and mixer API, and avoids supporting complex and
+ unnecessary operations, that could be dealt with at a higher level.

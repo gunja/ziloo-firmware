@@ -1,0 +1,8 @@
+Package: tinyalsa-utils
+Version: 1.1.1-34ffa583936aeb6938636c9c0a26a322b69b0d26
+Depends: libc, tinyalsa-lib
+Source: package/libs/tinyalsa
+Section: utils
+Architecture: sunxi
+Installed-Size: 18835
+Description:  This package contains utilities provided by TinyALSA.

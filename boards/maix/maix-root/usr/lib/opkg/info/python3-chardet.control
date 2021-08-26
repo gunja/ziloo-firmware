@@ -1,0 +1,10 @@
+Package: python3-chardet
+Version: 3.0.4-4
+Depends: libc, python3-light
+Source: package/lang/python/python-chardet
+License: LGPL-2.1
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 103867
+Description:  Universal encoding detector for Python 2 and 3

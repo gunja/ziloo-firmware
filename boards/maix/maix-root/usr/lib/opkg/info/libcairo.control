@@ -1,0 +1,17 @@
+Package: libcairo
+Version: 1.14.6-1
+Depends: libc, libpixman, libpng, zlib, fontconfig, libfreetype, glib2
+Source: package/libs/cairo
+License: LGPLv2.1+
+Section: libs
+Maintainer: Karl Palsson <karlp@remake.is>
+Architecture: sunxi
+Installed-Size: 294242
+Description:  Cairo is a 2D graphics library with support for multiple output devices.
+ Currently supported output targets include the X Window System (via both Xlib and XCB).
+ Quartz, Win32, image buffers, PostScript, PDF, and SVG file output.
+ Experimental backends include OpenGL, BeOS, OS/2, and DirectFB.
+ 
+ Cairo is designed to produce consistent output on all output media while
+ taking advantage of display hardware acceleration when available
+ (eg. through the X Render Extension).

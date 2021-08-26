@@ -1,0 +1,8 @@
+Package: libawadbauth
+Version: 0.0.1-1
+Depends: libc, libev
+Source: package/utils/adb
+Section: libs
+Architecture: sunxi
+Installed-Size: 4797
+Description:  adb auth lib for Tina Linux

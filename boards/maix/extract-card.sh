@@ -11,7 +11,10 @@ fdisk -lu $MAIXPY_IMG
 lsblk
 
 # Extract parts spotted (SPL)
-dd bs=512 count=96 skip=16 of=/workspace/images/spl-extract.img if=$MAIXPY_IMG
+dd bs=512 count=96 seek=16 of=/workspace/images/spl-extract.img if=$MAIXPY_IMG
+dd bs=512 count=512 seek=49152 of=/workspace/images/env-extract.img if=$MAIXPY_IMG
+dd bs=512 count=881151 seek=49664 of=/workspace/images/boot-extract.img if=$MAIXPY_IMG
+dd bs=512 count=163840 seek=717312 of=/workspace/images/swap-extract.img if=$MAIXPY_IMG
 
 # Set up /dev/loop0
 # https://askubuntu.com/questions/69363/mount-single-partition-from-image-of-entire-disk-device

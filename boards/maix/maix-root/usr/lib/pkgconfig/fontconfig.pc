@@ -1,0 +1,18 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+sysconfdir=/etc
+localstatedir=/var
+PACKAGE=fontconfig
+confdir=${sysconfdir}/fonts
+cachedir=${localstatedir}/cache/${PACKAGE}
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.12.1
+Requires:  freetype2
+Requires.private:  expat
+Libs: -L${libdir} -lfontconfig
+Libs.private: -L/home/juwan/v831/out/v831-sipeed/staging_dir/target/usr/lib -lexpat -L/home/juwan/v831/out/v831-sipeed/staging_dir/target/usr/lib -lfreetype  
+Cflags: -I${includedir} -I/home/juwan/v831/out/v831-sipeed/staging_dir/target/usr/include -I/home/juwan/v831/out/v831-sipeed/staging_dir/target/usr/include/freetype2 -I/home/juwan/v831/out/v831-sipeed/staging_dir/target/usr/include  

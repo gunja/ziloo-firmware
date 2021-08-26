@@ -1,0 +1,9 @@
+Package: python-pip-conf
+Version: 0.1-1
+Depends: libc
+Source: package/lang/python/python-pip-conf
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 207
+Description:  Configuration file for pip/pip3

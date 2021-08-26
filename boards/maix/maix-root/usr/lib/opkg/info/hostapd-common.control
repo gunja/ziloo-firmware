@@ -1,0 +1,10 @@
+Package: hostapd-common
+Version: 2017-11-08-2
+Depends: libc, libubus
+Source: package/network/services/hostapd
+License: BSD-3-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Architecture: sunxi
+Installed-Size: 5303
+Description:  hostapd/wpa_supplicant common support files

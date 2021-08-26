@@ -1,0 +1,8 @@
+Package: sipeed_update_dtb
+Version: 0.0.1-1
+Depends: libc
+Source: package/sipeed/tools/update_dtb
+Section: opt
+Architecture: sunxi
+Installed-Size: 3691
+Description:  Sipeed tools update_dtb

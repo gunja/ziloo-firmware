@@ -1,0 +1,15 @@
+Package: python3-numpy
+Version: 1.19.2-1
+Depends: libc, python3
+Source: package/lang/python/numpy
+License: BSD-3-Clause
+LicenseFiles: LICENSE.txt
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 5542595
+Description:  NumPy is the fundamental package for array computing with Python.
+ 
+ By default, this package is built without some modules.
+ For some modules to be available, the INSTALL_GFORTRAN symbol needs
+ to be enabled in the OpenWrt core/toolchain.

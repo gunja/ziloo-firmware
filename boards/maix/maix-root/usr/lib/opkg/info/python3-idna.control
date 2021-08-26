@@ -1,0 +1,14 @@
+Package: python3-idna
+Version: 2.10-1
+Depends: libc, python3-light, python3-codecs
+Source: package/lang/python/python-idna
+License: BSD-3-Clause
+LicenseFiles: LICENSE.rst
+Section: lang
+Maintainer: Jeffery To <jeffery.to@gmail.com>, Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 57864
+Description:  A library to support the Internationalised Domain Names in Applications
+ (IDNA) protocol as specified in RFC 5891. This version of the protocol
+ is often referred to as "IDNA2008" and can produce different results
+ from the earlier standard from 2003.

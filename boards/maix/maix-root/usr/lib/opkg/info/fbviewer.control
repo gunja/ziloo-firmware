@@ -1,0 +1,8 @@
+Package: fbviewer
+Version: 1
+Depends: libc, libpng, libjpeg
+Source: package/utils/fbviewer
+Section: utils
+Architecture: sunxi
+Installed-Size: 10471
+Description:  Frame buffer viewer image

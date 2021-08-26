@@ -1,0 +1,11 @@
+Package: python3-pillow
+Version: 7.2.0-1
+Depends: libc, libfreetype, libjpeg, zlib, python3
+Source: package/lang/python/pillow
+License: HPND
+LicenseFiles: LICENSE
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 433783
+Description:  The friendly PIL fork

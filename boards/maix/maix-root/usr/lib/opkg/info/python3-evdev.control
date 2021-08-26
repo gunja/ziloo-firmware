@@ -1,0 +1,10 @@
+Package: python3-evdev
+Version: 1.4.0-2
+Depends: libc, libpthread, python3-light, python3-ctypes
+Source: package/lang/python/python-evdev
+License: BSD-3-Clause
+Section: lang
+Maintainer: Paulo Costa <me@paulo.costa.nom.br>, Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 41242
+Description:  Bindings to the Linux input handling subsystem

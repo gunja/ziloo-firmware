@@ -1,0 +1,8 @@
+Package: python3-spidev
+Version: 3.5-2
+Depends: libc, python3-light, python3-ctypes
+Source: package/lang/python/python-spidev
+Section: lang
+Architecture: sunxi
+Installed-Size: 10633
+Description:  Bindings to the Linux input handling subsystem

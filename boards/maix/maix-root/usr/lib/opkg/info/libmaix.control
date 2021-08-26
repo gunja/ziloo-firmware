@@ -1,0 +1,9 @@
+Package: libmaix
+Version: 0.0.1-1
+Depends: libc, libstdcpp, eyesee-mpp-middleware
+Source: package/sipeed/libmaix
+Section: opt
+Maintainer: SIPEED
+Architecture: sunxi
+Installed-Size: 566240
+Description:  maix middleware libs

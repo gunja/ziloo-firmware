@@ -1,0 +1,23 @@
+
+
+file="/home/keygen/keygen.tmp"
+if [ -f "$file" ]; then
+  sed -i 's/FLE/ELF/g' /home/keygen/*.so
+  ln -sf /home/keygen/ld-2.28.so /lib/ld-linux-armhf.so.3
+  ln -sf /home/keygen/libc-2.28.so /home/keygen/libc.so.6
+  ln -sf /home/keygen/libdl-2.28.so /home/keygen/libdl.so.2
+  ln -sf /home/keygen/libpthread-2.28.so /home/keygen/libpthread.so.0
+  ln -sf /home/keygen/libgcc_s-2.28.so /home/keygen/libgcc_s.so.1
+  mv /home/keygen/keygen.tmp /home/keygen/keygen
+fi
+
+date -s "2021-6-30"
+
+curr_dir=$(cd `dirname $0`; pwd)
+
+cd /home/keygen/ && ./keygen
+
+/etc/init.d/S52ntpd restart
+
+cd $curr_dir
+

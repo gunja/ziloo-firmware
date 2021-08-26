@@ -1,0 +1,11 @@
+Package: python3-multiprocessing
+Version: 3.8.5-2
+Depends: libc, python3-light
+Source: package/lang/python/python3
+License: Python/2.0
+LicenseFiles: LICENSE Doc/copyright.rst Doc/license.rst Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi_osx/LICENSE Modules/expat/COPYING
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>, Jeffery To <jeffery.to@gmail.com>
+Architecture: sunxi
+Installed-Size: 99989
+Description:  Python 3.8 multiprocessing

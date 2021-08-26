@@ -1,0 +1,11 @@
+Package: python3-requests
+Version: 2.24.0-1
+Depends: libc, python3-light, python3-chardet, python3-idna, python3-urllib3, python3-certifi
+Source: package/lang/python/python-requests
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: lang
+Maintainer: Josef Schlehofer <josef.schlehofer@nic.cz>, Alexandru Ardelean <ardeleanalex@gmail.com>
+Architecture: sunxi
+Installed-Size: 60571
+Description:  Requests is the only Non-GMO HTTP library for Python, safe for human consumption

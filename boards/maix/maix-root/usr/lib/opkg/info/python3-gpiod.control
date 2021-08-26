@@ -1,0 +1,8 @@
+Package: python3-gpiod
+Version: 1.4.0-2
+Depends: libc, python3-light
+Source: package/lang/python/python-gpiod
+Section: lang
+Architecture: sunxi
+Installed-Size: 26452
+Description:  A fast and complete Python implementation of gpiod.

@@ -1,0 +1,8 @@
+Package: python3-plumbum
+Version: 1.6.9-2
+Depends: libc, python3-light
+Source: package/lang/python/python-plumbum
+Section: lang
+Architecture: sunxi
+Installed-Size: 141299
+Description:  A fast and complete Python implementation of plumbum.

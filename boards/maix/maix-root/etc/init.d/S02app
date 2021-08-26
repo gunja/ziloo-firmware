@@ -1,0 +1,23 @@
+#!/bin/sh
+
+[ ! -e /va/run ] && mkdir -p /var/run
+
+case "$1" in
+  start)
+        echo "Starting app..."
+        python3 /home/startup.py >/dev/null 2>&1 &
+        ;;
+  stop)
+        echo "Stopping app..."
+        killall python3
+        ;;
+  restart|reload)
+        "$0" stop
+        "$0" start
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

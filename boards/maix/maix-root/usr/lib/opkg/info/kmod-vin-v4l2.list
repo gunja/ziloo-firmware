@@ -1,0 +1,10 @@
+/lib/modules/4.9.118/videobuf2-memops.ko
+/etc/modules.d/vin-v4l2
+/lib/modules/4.9.118/videobuf2-core.ko
+/lib/modules/4.9.118/sensor_power.ko
+/lib/modules/4.9.118/vin_io.ko
+/lib/modules/4.9.118/vin_v4l2.ko
+/lib/modules/4.9.118/sp2305_mipi.ko
+/lib/modules/4.9.118/ov9732_mipi.ko
+/lib/modules/4.9.118/videobuf2-v4l2.ko
+/lib/modules/4.9.118/videobuf2-dma-contig.ko

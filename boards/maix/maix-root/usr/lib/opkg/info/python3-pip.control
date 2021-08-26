@@ -1,0 +1,11 @@
+Package: python3-pip
+Version: 20.1.1-1
+Depends: libc, python3, python3-setuptools, python-pip-conf
+Source: package/lang/python/python3
+License: Python/2.0
+LicenseFiles: LICENSE Doc/copyright.rst Doc/license.rst Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi_osx/LICENSE Modules/expat/COPYING
+Section: lang
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>, Jeffery To <jeffery.to@gmail.com>
+Architecture: sunxi
+Installed-Size: 1362408
+Description:  Python 3.8 pip module

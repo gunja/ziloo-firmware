@@ -1,0 +1,8 @@
+Package: harfbuzz
+Version: 1.7.4-1
+Depends: libc, libcairo, libfreetype, libstdcpp, icu, glib2
+Source: package/libs/harfbuzz
+Section: libs
+Architecture: sunxi
+Installed-Size: 176541
+Description:  HarfBuzz is an OpenType text shaping engine.

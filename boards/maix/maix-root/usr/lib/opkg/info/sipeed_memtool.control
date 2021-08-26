@@ -1,0 +1,8 @@
+Package: sipeed_memtool
+Version: 0.0.1-1
+Depends: libc
+Source: package/sipeed/tools/memtool
+Section: opt
+Architecture: sunxi
+Installed-Size: 8384
+Description:  Sipeed tools memtool

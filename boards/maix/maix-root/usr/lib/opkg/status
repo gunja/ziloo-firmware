@@ -1,0 +1,1040 @@
+Package: terminfo
+Version: 5.9-3
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: lrzsz
+Version: 0.12.20-2
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: tinyalsa-lib
+Version: 1.1.1-34ffa583936aeb6938636c9c0a26a322b69b0d26
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libc
+Version: -1
+Depends: libgcc
+Status: install hold installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: opkg
+Version: 9c97d5ecd795709c8584e972bfdf3aee3a5b846d-10
+Depends: libc, uclient-fetch
+Status: install user installed
+Architecture: sunxi
+Conffiles:
+ /etc/opkg.conf 26a52078154f218f09fd06901c7da77d64
+ /etc/opkg/customfeeds.conf f1ae25df49657c6ad8e1a23b9f1c35a4ce
+Installed-Time: 1627873787
+
+Package: wget
+Version: 1.20.1-3
+Depends: libc, libpcre, zlib, libopenssl, librt
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libjpeg
+Version: 9a-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libpthread
+Version: -1
+Depends: libgcc
+Status: install hold installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: ubus
+Version: 2016-01-26-619f3a160de4f417226b69039538882787b3811c
+Depends: libc, libubus, libblobmsg-json, ubusd
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: alsa-lib
+Version: 1.1.4.1-1
+Depends: libc, libpthread, librt
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: busybox
+Version: 1.27.2-3
+Depends: libc, jsonfilter
+Provides: ip
+Status: install user installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-urllib
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-email
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-light
+Version: 3.8.5-2
+Depends: libc, python3-base, libffi, libbz2, libuuid, libreadline, libncurses
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: kmod-vin-v4l2
+Version: 4.9.118-1
+Depends: kernel (= 4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb)
+Status: install hold installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: tinyalsa-utils
+Version: 1.1.1-34ffa583936aeb6938636c9c0a26a322b69b0d26
+Depends: libc, tinyalsa-lib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-pyserial
+Version: 3.4-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: glib2
+Version: 2.50.1-1
+Depends: libc, zlib, libpthread, libffi, libattr, libpcre
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-numpy
+Version: 1.19.2-1
+Depends: libc, python3
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-pydoc
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-rsa
+Version: 4.6-1
+Depends: libc, python3, python3-pyasn1
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: liblzma
+Version: 5.2.2-1
+Depends: libc, libpthread
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libcurl
+Version: 7.54.1-1
+Depends: libc, libopenssl, libnghttp2
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-evdev
+Version: 1.4.0-2
+Depends: libc, libpthread, python3-light, python3-ctypes
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: glog
+Version: 0.3.5-2
+Depends: libc, libstdcpp, libpthread
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: harfbuzz
+Version: 1.7.4-1
+Depends: libc, libcairo, libfreetype, libstdcpp, icu, glib2
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libev
+Version: 4.22-3
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: adb
+Version: 0.0.1-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libnghttp2
+Version: 1.24.0
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-rpyc
+Version: 5.0.1-3
+Depends: libc, python3, python3-plumbum
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libpcre
+Version: 8.38-2
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-plumbum
+Version: 1.6.9-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libawadbauth
+Version: 0.0.1-1
+Depends: libc, libev
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-email
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: netifd
+Version: 2016-02-01-3610a24b218974bdf2d2f709a8af9e4a990c47bd
+Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-idna
+Version: 2.10-1
+Depends: libc, python3-light, python3-codecs
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-cgitb
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-cgi, python3-pydoc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: eyesee-mpp-system
+Version: 1.0-1
+Depends: libc, glog, liblua, eyesee-mpp-external
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-decimal
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: ubusd
+Version: 2016-01-26-619f3a160de4f417226b69039538882787b3811c
+Depends: libc, libubox, libblobmsg-json
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-zbarlight
+Version: 3.0-1
+Depends: libc, libzbar, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python-pip-conf
+Version: 0.1-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-xml
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-urllib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-setuptools
+Version: 47.1.0-1
+Depends: libc, python3, python3-pkg-resources
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: sipeed_memtool
+Version: 0.0.1-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-pillow
+Version: 7.2.0-1
+Depends: libc, libfreetype, libjpeg, zlib, python3
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libxml2
+Version: 2.9.3-1
+Depends: libc, libpthread, zlib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-pkg-resources
+Version: 47.1.0-1
+Depends: libc, python3
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libuci
+Version: 2016-02-02.1-1
+Depends: libc, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: liblua
+Version: 5.1.5-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: uclient-fetch
+Version: 2016-01-28-2e0918c7e0612449024caaaa8d44fb2d7a33f5f3
+Depends: libc, libuclient
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libuclient
+Version: 2016-01-28-2e0918c7e0612449024caaaa8d44fb2d7a33f5f3
+Depends: libc, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: fontconfig
+Version: 2.12.1-3
+Depends: libc, libfreetype, libexpat, libpthread
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libpng
+Version: 1.2.56-1
+Depends: libc, zlib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: uci
+Version: 2016-02-02.1-1
+Depends: libc, libuci
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: dropbear
+Version: 2015.71-2
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Conffiles:
+ /etc/dropbear/dropbear_rsa_host_key e3b0c44298fc1c149afbf4c8996fb92427
+ /etc/config/dropbear e3dbf556f41595a392e9738836a4489a85
+Installed-Time: 1627873787
+
+Package: python3-gpiod
+Version: 1.4.0-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: curl
+Version: 7.54.1-1
+Depends: libc, libcurl
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libstdcpp
+Version: -1
+Status: install hold installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: mtd
+Version: 21
+Depends: libc, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-ncurses
+Version: 3.8.5-2
+Depends: libc, python3-light, libncurses
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-distutils
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-email
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-codecs
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: wpa-supplicant
+Version: 2017-11-08-2
+Depends: libc, libnl-tiny
+Conflicts: wpad, wpad-mini, wpad-mesh
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: i2c-tools
+Version: 3.1.2-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-requests
+Version: 2.24.0-1
+Depends: libc, python3-light, python3-chardet, python3-idna, python3-urllib3, python3-certifi
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libjson-c
+Version: 0.12-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: usb-gadget
+Version: 1-1
+Depends: libc, libpthread, libstdcpp
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libgcc
+Version: -1
+Status: install hold installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libwebp
+Version: 0.4.3-1
+Depends: libc, libjpeg, libpng
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-multiprocessing
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: busybox-init-base-files
+Version: 167-1627875926
+Depends: libc, libmaix, opencv, python3
+Status: install user installed
+Architecture: sunxi
+Conffiles:
+ /etc/inittab e0fd7ad3528e4827d5dc80da08bb5f9b79
+ /etc/passwd e0bbb2465b6c3dc110de360001fe066fc0
+ /etc/shadow 5f7f3305cd429ca6bb632bb246f6fcb306
+ /etc/profile 6f66981a3e6dcd1cd09f9bccdce681b793
+ /etc/shells 8b35ce73c18161a7d7ed16fa244410993b
+Installed-Time: 1627873787
+
+Package: libreadline
+Version: 6.3-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libcairo
+Version: 1.14.6-1
+Depends: libc, libpixman, libpng, zlib, fontconfig, libfreetype, glib2
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libmaix
+Version: 0.0.1-1
+Depends: libc, libstdcpp, eyesee-mpp-middleware
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libffi
+Version: 3.0.13-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libuuid
+Version: 2.25.2-4
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libubox
+Version: 2016-02-26-5326ce1046425154ab715387949728cfb09f4083
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-base
+Version: 3.8.5-2
+Depends: libc, libpthread, zlib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libzbar
+Version: 0.10
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: logd
+Version: 2016-03-07-fd4bb41ee7ab136d25609c2a917beea5d52b723b
+Depends: libc, libubox, libubus, libblobmsg-json
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-unittest, python3-ncurses, python3-ctypes, python3-pydoc, python3-logging, python3-decimal, python3-multiprocessing, python3-urllib, python3-xml, python3-sqlite3, python3-gdbm, python3-codecs, python3-email, python3-distutils, python3-openssl, python3-cgi, python3-cgitb, python3-dbm, python3-lzma, python3-asyncio
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: librt
+Version: -1
+Depends: libpthread
+Status: install hold installed
+Essential: yes
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-spidev
+Version: 3.5-2
+Depends: libc, python3-light, python3-ctypes
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libjson-script
+Version: 2016-02-26-5326ce1046425154ab715387949728cfb09f4083
+Depends: libc, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-qrcode
+Version: 6.1-3
+Depends: libc, python3, python3-setuptools, python3-six, python3-pillow
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libblobmsg-json
+Version: 2016-02-26-5326ce1046425154ab715387949728cfb09f4083
+Depends: libc, libjson-c, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-sqlite3
+Version: 3.8.5-2
+Depends: libc, python3-light, libsqlite3
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: fbviewer
+Version: 1
+Depends: libc, libpng, libjpeg
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-urllib3
+Version: 1.25.10-1
+Depends: libc, python3
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libpixman
+Version: 0.34.0-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: eyesee-mpp-middleware
+Version: 1.0-1
+Depends: libc, eyesee-mpp-system, zlib, alsa-lib
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-schedule
+Version: 0.6.0-2
+Depends: libc, python3-light, python3-logging
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: jshn
+Version: 2016-02-26-5326ce1046425154ab715387949728cfb09f4083
+Depends: libc, libjson-c, libubox, libblobmsg-json
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libncurses
+Version: 5.9-3
+Depends: libc, terminfo
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: e2fsprogs
+Version: 1.42.12-1
+Depends: libc, libuuid, libext2fs
+Status: install user installed
+Architecture: sunxi
+Conffiles:
+ /etc/e2fsck.conf dece11e2b15f487d7d2bf9f96abe2eaaf9
+Installed-Time: 1627873787
+
+Package: python3-gdbm
+Version: 3.8.5-2
+Depends: libc, python3-light, libgdbm
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-pyasn1
+Version: 0.4.8-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: icu
+Version: 55.2-1
+Depends: libc, libstdcpp, libpthread
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: ca-certificates
+Version: 20160104
+Depends: libc
+Status: install user installed
+Architecture: all
+Installed-Time: 1627873787
+
+Package: python3-pip
+Version: 20.1.1-1
+Depends: libc, python3, python3-setuptools, python-pip-conf
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-dbm
+Version: 3.8.5-2
+Depends: libc, python3-light, libdb47
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-chardet
+Version: 3.0.4-4
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: wpa-cli
+Version: 2017-11-08-2
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libubus
+Version: 2016-01-26-619f3a160de4f417226b69039538882787b3811c
+Depends: libc, libubox
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-openssl
+Version: 3.8.5-2
+Depends: libc, python3-light, libopenssl, ca-certs
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: adbd_auth_service
+Version: 0.0.1-1
+Depends: libc, libawadbauth
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: zlib
+Version: 1.2.8-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-asyncio
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-cgi
+Version: 3.8.5-2
+Depends: libc, python3-light, python3-email
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-logging
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: sipeed_update_dtb
+Version: 0.0.1-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libsqlite3
+Version: 3120200-1
+Depends: libc, libpthread
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: eyesee-mpp-external
+Version: 1.0-1
+Depends: libc, libsqlite3, glog
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libext2fs
+Version: 1.42.12-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libexpat
+Version: 2.1.0-3
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-ctypes
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: ubox
+Version: 2016-03-07-fd4bb41ee7ab136d25609c2a917beea5d52b723b
+Depends: libc, libubox, ubusd, ubus, libubus, libuci
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: kernel
+Version: 4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb
+Depends: libc
+Status: install hold installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libnl-tiny
+Version: 0.1-5
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libbz2
+Version: 1.0.6-2
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: kmod-8189fs
+Version: 4.9.118-1
+Depends: kernel (= 4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb), kmod-sunxi-rf-wlan, kmod-cfg80211
+Status: install hold installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: python3-lzma
+Version: 3.8.5-2
+Depends: libc, python3-light, liblzma
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-six
+Version: 1.15.0-1
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-certifi
+Version: 2020.6.20-1
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libgdbm
+Version: 1.11-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libfreetype
+Version: 2.5.5-2
+Depends: libc, zlib, libbz2
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: jsonfilter
+Version: 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
+Depends: libc, libubox, libjson-c
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: hostapd-common
+Version: 2017-11-08-2
+Depends: libc, libubus
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: iperf3
+Version: 3.0.11-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+
+Package: libattr
+Version: 20150922-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libopenssl
+Version: 1.1.0i-1
+Depends: libc
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: python3-unittest
+Version: 3.8.5-2
+Depends: libc, python3-light
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: kmod-cfg80211
+Version: 4.9.118-1
+Depends: kernel (= 4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb)
+Status: install hold installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: libdb47
+Version: 4.7.25.4.NC-5
+Depends: libc, libxml2
+Provides: libdb47-full
+Status: install user installed
+Architecture: sunxi
+Installed-Time: 1627873787
+Auto-Installed: yes
+
+Package: kmod-spi-dev
+Version: 4.9.118-1
+Depends: kernel (= 4.9.118-1-5a34c2cefee5965650d8fb4f65d9b2eb)
+Status: install hold installed
+Architecture: sunxi
+Installed-Time: 1627873787
+

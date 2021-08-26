@@ -1,0 +1,10 @@
+Package: libpixman
+Version: 0.34.0-1
+Depends: libc
+Source: package/libs/pixman
+License: MIT
+Section: libs
+Maintainer: <pixman@lists.freedesktop.org>
+Architecture: sunxi
+Installed-Size: 120878
+Description:  Pixman is a low-level software library for pixel manipulation

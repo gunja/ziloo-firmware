@@ -67,3 +67,22 @@ The current build doesn't support
 
 > sudo docker build --target base -t thepia/ziloo-base:v1 .
 > sudo docker images
+
+
+## Rockchip Source Compile
+
+Mac OS
+> brew install android-platform-tools
+
+Ubuntu
+> apt install repo
+
+
+## Buildroot build
+
+```
+cd /workspace/buildroot
+make clean
+make menuconfig
+make
+```

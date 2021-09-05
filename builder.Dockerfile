@@ -9,19 +9,18 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 	# Install dependencies
 	# See https://buildroot.org/downloads/manual/manual.html#requirement
 	# MANDATORY build tools
-	#which \
-	#sed \
-	make \
+	# which \
+	sed \
+	autoconf libtool make \
 	binutils \
 	build-essential \
+    gcc-aarch64-linux-gnu libudev-dev \
 	gcc \
 	g++ \
-	#bash \
+	bash \
 	patch \
-	#gzip \
 	bzip2 \
 	perl \
-	#tar \
 	cpio \
 	unzip \
 	rsync \
@@ -75,7 +74,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     squashfs-tools \
     u-boot-tools \
 	tar \
-    zip \
+    bzip2 zip \
 
 	# OPTIONAL graph generation tools
 	#graphviz \
@@ -91,6 +90,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 	locales \
 
 	# More Build tools
+    m4 \
     cmake \
     bison \
 	flex \
@@ -101,6 +101,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     lzop \
     libyaml-dev \
     libusb-dev \
+    python-linaro-image-tools linaro-image-tools \
 
 	## Python setup
     python3-markdown python3-distutils python3-pip && \
@@ -119,6 +120,14 @@ RUN /boards/install-genimage.sh
 
 FROM image-builder as ziloo-builder
 
+#  autotools-dev
+# libsigsegv2 m4 intltool libdrm-dev curl binutils build-essential gcc
+# g++  gawk  perl cpio unzip rsync file
+# libncurses5 libqt4-dev libglib2.0-dev libgtk2.0-dev libglade2-dev cvs git
+#  rsync openssh-client subversion asciidoc w3m dblatex graphviz python-
+# matplotlib libc6:i386 libssl-dev expect fakeroot liblz4-tool
+#  keychain
+
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	# Unsorted Tools
     debootstrap \
@@ -127,6 +136,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     bc \
     gnupg \
     mtools mtd-utils \
+    gcc-aarch64-linux-gnu libudev-dev \
     ncurses-base ncurses-bin dialog \
     #  && \
     # rm -rf /var/lib/apt/lists/*

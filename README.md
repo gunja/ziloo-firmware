@@ -77,6 +77,8 @@ Mac OS
 Ubuntu
 > apt install repo
 
+https://wiki.t-firefly.com/en/CORE-1126-JD4/Source_code.html
+
 
 ## Buildroot build
 
@@ -86,3 +88,9 @@ make clean
 make menuconfig
 make
 ```
+
+
+## Tokens
+
+gitlab token
+digitalgap/UYSm1y5FzvNQb2nBdusp

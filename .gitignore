@@ -6,3 +6,4 @@ images
 alpine-rpi-*
 alpine-uboot-*
 ziloo-dev-card.img.*
+/rockdev

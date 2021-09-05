@@ -4,6 +4,13 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = git@github.com:experientials/buildroot.git
+[submodule "kernel"]
+	path = kernel
+	url = https://digitalgap@gitlab.com/firefly-linux/kernel
+[submodule "tools"]
+	path = tools
+	url = https://digitalgap@gitlab.com/firefly-linux/tools
+	
 [submodule "rkbin"]
 	path = rkbin
-	url = git@github.com:rockchip-linux/rkbin.git
+	url = https://digitalgap@gitlab.com/firefly-linux/rkbin

@@ -4,3 +4,6 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = git@github.com:experientials/buildroot.git
+[submodule "rkbin"]
+	path = rkbin
+	url = git@github.com:rockchip-linux/rkbin.git

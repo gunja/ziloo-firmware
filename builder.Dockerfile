@@ -63,6 +63,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     qemu-user-static \
 	# Disk Image building
     binfmt-support \
+    build-essential \
+    curl \
+    debootstrap \
     dosfstools \
     fdisk \
     gdisk \

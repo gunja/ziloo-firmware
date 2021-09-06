@@ -14,3 +14,9 @@
 [submodule "rkbin"]
 	path = rkbin
 	url = https://digitalgap@gitlab.com/firefly-linux/rkbin
+[submodule "app"]
+	path = app
+	url = git@github.com:experientials/rockchip-app.git
+[submodule "external"]
+	path = external
+	url = git@github.com:experientials/rockchip-external.git

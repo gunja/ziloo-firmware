@@ -3,7 +3,7 @@
 # download and create genimage by nagel
 
 #update ubuntu
-apt install -y autoconf
+apt install -y autoconf automake
 apt install -y gcc
 apt-get install -y make
 apt-get install -y genext2fs

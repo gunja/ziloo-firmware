@@ -11,7 +11,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 	# MANDATORY build tools
 	# which \
 	sed \
-	autoconf libtool make \
+	autoconf libtool make automake \
+	time \
 	binutils \
 	build-essential \
     gcc-aarch64-linux-gnu libudev-dev \
@@ -101,11 +102,13 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     lzop \
     libyaml-dev \
     libusb-dev \
-    python-linaro-image-tools linaro-image-tools \
 
 	## Python setup
-    python3-markdown python3-distutils python3-pip && \
-	echo Packages installed.
+    python3-markdown python3-distutils python3-pip
+
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+#	python-linaro-image-tools linaro-image-tools && \
+#	echo Packages installed.
 
 RUN gem update --system && \
     gem install --no-document serverspec
@@ -115,7 +118,10 @@ RUN gem update --system && \
 ## Genimage is the main tool for creating firmware disk images
 COPY boards/install-genimage.sh /boards/install-genimage.sh
 RUN /boards/install-genimage.sh
-
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
+RUN echo "deb http://ge.archive.ubuntu.com/ubuntu hirsute main multiverse" > /etc/apt/sources.list.d/repo-hirsuite.list
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends repo
 
 
 FROM image-builder as ziloo-builder

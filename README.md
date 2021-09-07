@@ -79,6 +79,10 @@ Ubuntu
 
 https://wiki.t-firefly.com/en/CORE-1126-JD4/Source_code.html
 
+Compile on RK3399
+http://www.shincbm.com/linux/rk3399/arm64/2019/01/25/rk3399-linux-compile-native.html
+http://www.shincbm.com/linux/rk3399/arm64/2018/10/03/rk3399-linux-compile.html
+
 
 ## Buildroot build
 

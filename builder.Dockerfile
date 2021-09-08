@@ -12,7 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 	# which \
 	sed \
 	autoconf libtool make automake \
-	time lz4 device-tree-compiler \
+	time lz4 device-tree-compiler fakeroot \
 	binutils \
 	build-essential \
     gcc-aarch64-linux-gnu libudev-dev \

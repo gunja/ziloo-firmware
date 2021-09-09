@@ -98,3 +98,9 @@ make
 
 gitlab token
 digitalgap/UYSm1y5FzvNQb2nBdusp
+
+
+## Rockchip Flashing
+
+http://opensource.rock-chips.com/wiki_Upgradetool
+

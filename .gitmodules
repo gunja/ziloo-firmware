@@ -20,3 +20,15 @@
 [submodule "external"]
 	path = external
 	url = git@github.com:experientials/rockchip-external.git
+[submodule "prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf"]
+	path = prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf
+	url = git@github.com:rockchip-linux/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf.git
+[submodule "prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf"]
+	path = prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf
+	url = git@github.com:rockchip-linux/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf.git
+[submodule "prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu"]
+	path = prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu
+	url = https://digitalgap@gitlab.com/firefly-linux/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu
+[submodule "prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf"]
+	path = prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf
+	url = https://digitalgap@gitlab.com/firefly-linux/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf

@@ -4,7 +4,7 @@ services:
     container_name: ziloo-builder-amd
     build:
       context: .
-      dockerfile: ./builder.Dockerfile
+      dockerfile: ./boards/builder.Dockerfile
       # target: ziloo-builder-amd
     platform: "linux/amd64"
     tty: true
@@ -15,11 +15,32 @@ services:
     container_name: ziloo-builder-arm64
     build:
       context: .
-      dockerfile: ./builder.Dockerfile
+      dockerfile: ./boards/builder.Dockerfile
       # target: ziloo-builder-arm64
     platform: "linux/aarch64"
     tty: true
     volumes: 
+    - .:/workspace
+    - ./boards:/boards
+  rockchip-amd:
+    container_name: rockchip-builder-amd
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    # image: rockchip-builder-amd:0.1
+    build:
+      context: .
+      dockerfile: ./boards/rockchip.Dockerfile
+    platform: "linux/amd64"
+    volumes:
+    - .:/workspace
+    - ./boards:/boards
+  rockchip-arm64:
+    container_name: rockchip-builder-arm64
+    build:
+      context: .
+      dockerfile: ./boards/rockchip.Dockerfile
+    platform: "linux/aarch64"
+    volumes:
     - .:/workspace
     - ./boards:/boards
 

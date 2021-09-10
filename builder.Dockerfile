@@ -12,7 +12,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
 	# which \
 	sed \
 	autoconf libtool make automake \
-	time lz4 device-tree-compiler fakeroot \
+	time lz4 device-tree-compiler fakeroot gnupg \
 	binutils \
 	build-essential \
     gcc-aarch64-linux-gnu libudev-dev \
@@ -120,8 +120,24 @@ COPY boards/install-genimage.sh /boards/install-genimage.sh
 RUN /boards/install-genimage.sh
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 RUN echo "deb http://ge.archive.ubuntu.com/ubuntu hirsute main multiverse" > /etc/apt/sources.list.d/repo-hirsuite.list
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends repo
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends repo && rm /etc/apt/sources.list.d/repo-hirsuite.list
+RUN git config --global user.email hello@thepia.com && git config --global user.name "Henrik Vendelbo" && git config --global color.ui false
+#RUN cd /workspace && repo init
+#RUN cd /workspace && repo init  --no-clone-bundle --repo-url https://gitlab.com/firefly-linux/git-repo.git -u https://gitlab.com/firefly-linux/manifests.git -b master -m rv1126_rv1109_linux_release.xml
+
+
+FROM image-builder as interactive_with_volumes
+RUN cd /workspace && repo init
+RUN cd /workspace && repo init  --no-clone-bundle --repo-url https://gitlab.com/firefly-linux/git-repo.git -u https://gitlab.com/firefly-linux/manifests.git -b master -m rv1126_rv1109_linux_release.xml
+RUN cd /workspace && repo sync -c
+RUN /build.sh aio-rv1126-jd4.mk
+RUN sed -ie 's/^YYLTYPE yylloc;$/extern YYLTYPE yylloc;/' u-boot/scripts/dtc/dtc-lexer.lex.c
+RUN sed -ie 's/(cat \$<; \$(if \$(u_boot_dtsi),echo '\''\\#include "\$(u_boot_dtsi)"'\'')) > \$(pre-tmp); \\/(cat \$<; \$(if \$(u_boot_dtsi),echo '\''#include "\$(u_boot_dtsi)"'\'')) > \$(pre-tmp); \\/' u-boot/scripts/Makefile.lib
+RUN ./build.sh uboot
+RUN sed -ie 's/^YYLTYPE yylloc;$/extern YYLTYPE yylloc;/' kernel/scripts/dtc/dtc-lexer.lex.c
+RUN ./build.sh kernel
+RUN repo sync -c
+RUN FORCE_UNSAFE_CONFIGURE=1 ./build.sh 
 
 
 FROM image-builder as ziloo-builder

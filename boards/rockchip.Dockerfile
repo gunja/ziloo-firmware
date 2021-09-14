@@ -7,7 +7,7 @@ FROM ubuntu:18.04 as base-builder
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     binutils bash gzip bzip2 tar lzop cpio python python-dev zip unzip rsync file bc \
-    u-boot-tools device-tree-compiler \
+    u-boot-tools device-tree-compiler time tcl \
 	autoconf libtool \
     mtools parted libyaml-dev libxml2-utils libudev-dev libusb-1.0-0-dev \
     curl wget sed asciidoc git  rsync openssh-client \

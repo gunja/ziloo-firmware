@@ -7,11 +7,21 @@ Links
 
 CAM-CRV1126S2U/CAM-CRV1109S2U can virtualize itself as a UVC and RNDIS device, through the Typec otg interface, it can be connected to any host computer to make a AI_UVC camera.
 
+To start a shell use the -shell service to get stdin & tty. If the container has already been built skip the build step.
+
 ```bash
 docker compose build rockchip-amd
-docker compose up rockchip-amd
-docker compose start rockchip-amd
-docker compose exec rockchip-amd /rkbin/tools/upgrade_tool
+docker compose run --rm rockchip-amd
+```
+
+
+
+```bash
+docker compose build rockchip-amd
+# docker compose up rockchip-amd
+# docker compose start rockchip-amd-shell
+# docker compose exec rockchip-amd /rkbin/tools/upgrade_tool
+docker compose run --rm rockchip-amd
 ```
 
 

@@ -22,11 +22,22 @@ services:
     volumes: 
     - .:/workspace
     - ./boards:/boards
+
+  # Simple container for PC 
+  # - Keep in sync with the -shell version 
   rockchip-amd:
     container_name: rockchip-builder-amd
+    build:
+      context: .
+      dockerfile: ./boards/rockchip.Dockerfile
+    platform: "linux/amd64"
+    volumes:
+    - .:/workspace
+    - ./boards:/boards
+  rockchip-amd-shell:
+    container_name: rockchip-builder-amd # Must be same container name to avoid rebuilding
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    # image: rockchip-builder-amd:0.1
     build:
       context: .
       dockerfile: ./boards/rockchip.Dockerfile

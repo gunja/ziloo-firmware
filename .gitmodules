@@ -6,7 +6,7 @@
 	url = git@github.com:experientials/buildroot.git
 [submodule "kernel"]
 	path = kernel
-	url = https://digitalgap@gitlab.com/firefly-linux/kernel
+	url = git@github.com:experientials/linux.git
 [submodule "tools"]
 	path = tools
 	url = https://digitalgap@gitlab.com/firefly-linux/tools

@@ -40,8 +40,7 @@ FROM base-builder as rockchip-builder
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     #
     # https://wiki.t-firefly.com/en/Firefly-RK3399/linux_compile_gpt.html    
-    linaro-image-tools \
-    python-linaro-image-tools \
+    #linaro-image-tools  python-linaro-image-tools \
     # repo git-core gitk git-gui \
     mercurial subversion cvs \
     # libqt4-dev \
@@ -105,3 +104,14 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	echo Packages installed.
 
 COPY rkbin rkbin
+
+RUN https://storage.googleapis.com/git-repo-downloads/repo > ~/repo
+RUN chmod a+rx ~/repo
+RUN git config --global user.email hello@thepia.com
+RUN git config --global user.name "Henrik Vendelbo"
+
+FROM rockchip-builder as rockchip-compiling
+WORKDIR /workspace
+RUN ~/repo init  --no-clone-bundle --repo-url https://gitlab.com/firefly-linux/git-repo.git -u https://gitlab.com/firefly-linux/manifests.git -b master -m rv1126_rv1109_linux_release.xml
+RUN ~/repo sync -c
+

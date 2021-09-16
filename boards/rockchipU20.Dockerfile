@@ -103,15 +103,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	## Done
 	echo Packages installed.
 
-COPY rkbin rkbin
 
-RUN curl https://storage.googleapis.com/git-repo-downloads/repo > ~/repo
-RUN chmod a+rx ~/repo
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /repo
+RUN chmod a+rx /repo
 RUN git config --global user.email hello@thepia.com
 RUN git config --global user.name "Henrik Vendelbo"
+RUN git config --global color.ui false
 
 FROM rockchip-builder as rockchip-compiling
 WORKDIR /workspace
-RUN ~/repo init  --no-clone-bundle --repo-url https://gitlab.com/firefly-linux/git-repo.git -u https://gitlab.com/firefly-linux/manifests.git -b master -m rv1126_rv1109_linux_release.xml
-RUN ~/repo sync -c
-RUN FORCE_UNSAFE_CONFIGURE=1 ./build.sh
+COPY building_inside_container.sh /building_inside_container.sh
+RUN chmod a+rx /building_inside_container.sh
+ENTRYPOINT /building_inside_container.sh

@@ -81,8 +81,8 @@ sudo fdisk -e /dev/disk2
 > w
 > exit
 tar -xzvf alpine-rpi-3.14.0-aarch64.tar.gz -C /Volumes/ALPINE --no-same-owner
-cp ./setup/setup-alpine.in /Volumes/ALPINE
-cp ./setup/setup.sh /Volumes/ALPINE
+cp ./device/alpine-rpi/setup/setup-alpine.in /Volumes/ALPINE
+cp ./device/alpine-rpi/setup/setup.sh /Volumes/ALPINE
 mkdir /Volumes/ALPINE/cache
 mkdir /Volumes/ALPINE/data
 ```

@@ -37,4 +37,4 @@ rm -rf ${GENIMAGE_TMP}
 
 # fdisk -l /${IMAGE_PATH}
 # # test raw image that we have built
-# # rspec --format documentation --color /boards/raw
+# # rspec --format documentation --color /device/raw

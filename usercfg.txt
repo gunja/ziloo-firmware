@@ -1,2 +1,0 @@
-dtparam=audio=on
-gpu_mem=128

@@ -45,9 +45,9 @@ RUN gem update --system && \
 # RUN pip3 install setup-tools
 
 
-COPY boards /boards/
+COPY device /device/
 
-RUN /boards/install-genimage.sh
+RUN /device/install-genimage.sh
 
 # build sd card image
 # CMD /builder/build.sh

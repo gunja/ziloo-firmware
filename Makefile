@@ -1,11 +1,13 @@
-default: build-firmware
+default: build-builder build-firmware
+
+docker-push: push-firmware push-builder
 
 build-builder:
-	docker build -t ziloo/image-builder -f ./builder.Dockerfile --target ziloo-builder .
+	docker build -t ziloo/image-builder -f ./device/builder.Dockerfile --target ziloo-builder .
 
 build-firmware:
-	docker build -t ziloo/runtime -f ./firmware.Dockerfile --target develop .
-	docker build -t ziloo/runtime-x11 -f ./firmware.Dockerfile --target develop-x11 .
+	docker build -t ziloo/firmware -f ./device/firmware.Dockerfile --target develop .
+	docker build -t ziloo/firmware-x11 -f ./device/firmware.Dockerfile --target develop-x11 .
 
 push-builder: build-builder
 	docker login --username ziloo

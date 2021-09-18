@@ -65,5 +65,14 @@ The current build doesn't support
 
 ## Docker
 
+The build and testing is run primarily in Docker. The firmware can be tested with QEMU in a dedicated docker container. Building the firmware also takes place in a Docker container. To rebuild the foundation docker containers run `make docker-push`. This will build and push docker images to Docker Hub. The password for
+the ziloo docker hub user will be needed.
+
 > sudo docker build --target base -t thepia/ziloo-base:v1 .
 > sudo docker images
+
+To open a builder shell run `docker compose run --rm builder-amd` or `docker compose run --rm builder-arm`.
+
+Boards builds:
+
+> docker compose run --rm builder-rv1109

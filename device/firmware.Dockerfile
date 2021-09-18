@@ -78,7 +78,7 @@ RUN mkdir -p /home/alpine/.vnc && x11vnc -storepasswd alpine /home/alpine/.vnc/p
 
 EXPOSE 5900
 
-ADD setup/develop/etc /etc
+ADD device/alpine-rpi/setup/develop/etc /etc
 COPY device/alpine-rpi/setup/dev-entrypoint.sh /usr/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]

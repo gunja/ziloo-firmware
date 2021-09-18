@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  builder-amd:
+    container_name: ziloo-builder-amd
+    build:
+      context: .
+      dockerfile: ./device/builder.Dockerfile
+      # target: ziloo-builder-amd
+    platform: "linux/amd64"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes: 
+    - ./dist:/dist
+    - ./device:/device
+  builder-rv1109:
+    container_name: ziloo-builder-rv1109
+    build:
+      context: .
+      dockerfile: ./device/builder-rv1109.Dockerfile
+    platform: "linux/amd64"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes: 
+    - ./dist:/dist
+    - ./device:/device
+  builder-arm64:
+    container_name: ziloo-builder-arm64
+    build:
+      context: .
+      dockerfile: ./device/builder.Dockerfile
+      # target: ziloo-builder-arm64
+    platform: "linux/aarch64"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes: 
+    - ./dist:/dist
+    - ./device:/device
+

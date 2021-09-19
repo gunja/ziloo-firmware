@@ -64,10 +64,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 	## Done
 	echo Packages installed.
 
-RUN pip install repo
 # Installed via apt
-# RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
-# RUN chmod a+rx /usr/bin/repo
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
+RUN chmod a+rx /usr/bin/repo
 RUN git config --global user.email hello@thepia.com
 RUN git config --global user.name "Henrik Vendelbo"
 RUN git config --global color.ui false

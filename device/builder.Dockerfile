@@ -55,7 +55,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     g++-7 libstdc++-7-dev autotools-dev \
     libsigsegv2  libdrm-dev \
     libncurses5 libncurses5-dev libglib2.0-dev libgtk2.0-dev libglade2-dev \
-    pkg-config swig \
+    pkg-config swig expect expect-dev \
 
 	# QEMU emulation
     qemu \

@@ -2,6 +2,7 @@ version: "3.8"
 services:
   builder-amd:
     container_name: ziloo-builder-amd
+    image: ziloo/image-builder
     build:
       context: .
       dockerfile: ./device/builder.Dockerfile
@@ -14,9 +15,21 @@ services:
     - ./device:/device
   builder-rv1109:
     container_name: ziloo-builder-rv1109
+    image: ziloo/image-builder-rv1109
     build:
       context: .
       dockerfile: ./device/builder-rv1109.Dockerfile
+    platform: "linux/amd64"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes: 
+    - ./dist:/dist
+    - ./device:/device
+  builder-rv1109-facial-gate:
+    container_name: ziloo-builder-facial-gate
+    build:
+      context: .
+      dockerfile: ./device/builder-rv1109-facial-gate.Dockerfile
     platform: "linux/amd64"
     stdin_open: true # docker run -i
     tty: true        # docker run -t

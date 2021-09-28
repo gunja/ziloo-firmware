@@ -33,7 +33,8 @@ RUN apt-get update && \
     u-boot-tools \
 
     m4 bison flex fakeroot libparse-yapp-perl \
-    build-essential gcc g++ make cmake intltool pkg-config patch patchutils
+    build-essential gcc g++ make cmake intltool pkg-config patch patchutils && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN gem update --system && \
     gem install --no-document serverspec
@@ -61,12 +62,22 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     qemu \
     qemu-user-static && \
 
+    rm -rf /var/lib/apt/lists/* && \
+
 	## Done
 	echo Packages installed.
 
 # Installed via apt
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo
 RUN chmod a+rx /usr/bin/repo
-RUN git config --global user.email hello@thepia.com
-RUN git config --global user.name "Henrik Vendelbo"
-RUN git config --global color.ui false
+RUN git config --global user.email hello@thepia.com && git config --global user.name "Henrik Vendelbo" && git config --global color.ui false
+
+
+FROM ziloo-builder as base-repo-image
+
+RUN mkdir -p /workspace/rockdev
+WORKDIR /workspace
+RUN repo init -u https://github.com/experientials/ziloo-firmware -m manifests/rv1126_rv1109_linux_20210904.xml
+COPY manifests /workspace/.repo/manifests
+RUN repo sync -m rv1126_rv1109_linux_20210904.xml -c
+

@@ -12,14 +12,12 @@ RUN apt-get update && \
     time lz4 device-tree-compiler fakeroot gnupg \
     mtools parted libyaml-dev libxml2-utils libudev-dev libusb-1.0-0-dev \
     curl wget sed asciidoc git  rsync openssh-client \
-
     perl ruby \
 	python3 \
 	python3-dev \
     python3-markdown python3-pip \
 	python3-distutils \
 	python3-setuptools \
-
 	# Disk Image building
     binfmt-support \
     debootstrap \
@@ -31,7 +29,6 @@ RUN apt-get update && \
 	xxd \
     squashfs-tools \
     u-boot-tools \
-
     m4 bison flex fakeroot libparse-yapp-perl \
     build-essential gcc g++ make cmake intltool pkg-config patch patchutils && \
     rm -rf /var/lib/apt/lists/*
@@ -39,12 +36,9 @@ RUN apt-get update && \
 RUN gem update --system && \
     gem install --no-document serverspec
 
-# RUN pip3 install setup-tools
-
-
 COPY device /device/
-
 RUN /device/install-genimage.sh
+
 
 FROM base-builder as ziloo-builder
 
@@ -57,14 +51,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libsigsegv2  libdrm-dev \
     libncurses5 libncurses5-dev libglib2.0-dev libgtk2.0-dev libglade2-dev \
     pkg-config swig expect expect-dev \
-
-	# QEMU emulation
     qemu \
     qemu-user-static && \
-
     rm -rf /var/lib/apt/lists/* && \
-
-	## Done
 	echo Packages installed.
 
 # Installed via apt

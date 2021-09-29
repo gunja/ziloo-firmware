@@ -30,7 +30,8 @@ services:
     container_name: ziloo-builder-rv1109-facial-gate
     build:
       context: .
-      dockerfile: ./device/builder-rv1109-facial-gate.Dockerfile
+      dockerfile: ./device/builder-all-in-one.Dockerfile
+      target: rv1109-face-gate
     platform: "linux/amd64"
     stdin_open: true # docker run -i
     tty: true        # docker run -t
@@ -41,7 +42,8 @@ services:
     container_name: ziloo-builder-rv1126-facial-gate
     build:
       context: .
-      dockerfile: ./device/builder-rv1126-facial-gate.Dockerfile
+      dockerfile: ./device/builder-all-in-one.Dockerfile
+      target: rv1126-face-gate
     platform: "linux/amd64"
     stdin_open: true # docker run -i
     tty: true        # docker run -t
@@ -54,9 +56,10 @@ services:
     container_name: ziloo-builder-rv1109-ai-uvc
     build:
       context: .
-      dockerfile: ./device/builder-rv1109-ai-uvc.Dockerfile
+      dockerfile: ./device/builder-all-in-one.Dockerfile
+      target: rv1109-ai-uvc
     platform: "linux/amd64"
-    stdin_open: true # docker run -i
+    #stdin_open: true # docker run -i
     tty: true        # docker run -t
     volumes: 
     - ./dist/build/rv1109-ai-uvc:/dist
@@ -65,7 +68,8 @@ services:
     container_name: ziloo-builder-rv1126-ai-uvc
     build:
       context: .
-      dockerfile: ./device/builder-rv1126-ai-uvc.Dockerfile
+      dockerfile: ./device/builder-all-in-one.Dockerfile
+      target: rv1126-ai-uvc
     platform: "linux/amd64"
     stdin_open: true # docker run -i
     tty: true        # docker run -t

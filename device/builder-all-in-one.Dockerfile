@@ -89,14 +89,14 @@ ENTRYPOINT /copy_dist.sh
 
 FROM base-repo-image as rv1109-face-gate
 WORKDIR /workspace
-RUN repo sync -m rv1126_rv1109_linux_20210904_facial_gate.xml -c
+RUN .repo/repo/repo sync -m rv1126_rv1109_linux_20210904.xml -c
 RUN ./build.sh cam-crv1109s2u-facial_gate.mk
 RUN FORCE_UNSAFE_CONFIGURE=1 ./build.sh
 ENTRYPOINT /copy_dist.sh
 
 FROM base-repo-image as rv1126-face-gate
 WORKDIR /workspace
-RUN repo sync -m rv1126_rv1109_linux_20210904_facial_gate.xml -c
+RUN .repo/repo/repo sync -m rv1126_rv1109_linux_20210904.xml -c
 RUN ./build.sh cam-crv1126s2u-facial_gate.mk
 RUN FORCE_UNSAFE_CONFIGURE=1 ./build.sh
 ENTRYPOINT /copy_dist.sh

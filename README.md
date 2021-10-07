@@ -76,3 +76,6 @@ To open a builder shell run `docker compose run --rm builder-amd` or `docker com
 Boards builds:
 
 > docker compose run --rm builder-rv1109
+
+## Building with one call:
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1126-facial-gate builder-rv1109-facial-gate

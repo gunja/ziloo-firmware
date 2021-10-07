@@ -4,3 +4,6 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = git@github.com:experientials/buildroot.git
+[submodule "tools"]
+	path = tools
+	url = git@github.com:thepia/firmware-tools.git

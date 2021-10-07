@@ -78,4 +78,26 @@ Boards builds:
 > docker compose run --rm builder-rv1109
 
 ## Building with one call:
-COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1126-facial-gate builder-rv1109-facial-gate
+
+> COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1126-facial-gate 
+> COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1126-ai-uvc
+
+or 
+
+> COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1109-facial-gate
+> COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up builder-rv1109-ai-uvc
+
+or put both targets in the command.
+
+For other targets see [docker-compose.yml](./docker-compose.yml).
+
+
+## Windows Programming Machine
+
+Things to install
+
+* [Adroid SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+* [Docker Desktop on Windows](https://www.docker.com/products/docker-desktop)
+* [Git for Windows](gitforwindows.org)
+
+Open powershell in the `platform-tools` folder. Run adb commands with `adb.exe`.

@@ -12,6 +12,8 @@ All you have to do is
 4) Configure pulling/pushing from GitHub with SSH
 5) Generate build artefacts to be accessed in Action results
 
+P.S. Please don't commit directly to branches main/builder. If need be create new branches to play with. We then merge your branch when all is working
+
 
 ## Connecting via SSH
 
@@ -25,8 +27,10 @@ Root pass: Jeg_er_håndværker
 ## Docker Support
 
 The server must [support docker](https://bobcares.com/blog/linode-install-docker/) to run our builds.
+Linode has added [support for Docker on Linode](https://www.linode.com/blog/containerization/docker-on-linode/).
+You might need to change docker to [run without sudo](https://stackoverflow.com/questions/56784492/docker-compose-permissionerror-errno-13-permission-denied-manage-py) by changing `/etc/systemd/system/sockets.target.wants/docker.socket`.
 
-The builds will also be Linux, but have dedicated configurations.
+The builds will also be Linux, but use docker to enable dedicated configurations and installation cached in the form of docker images and containers.
 
 
 ## GitHub Actions
@@ -64,3 +68,35 @@ Steps in script(as it seems to me):
 3) Use docker to run the builds
 4) Do the builds for RV1109/RV1126 and both apps (Facial Gate will eventually be disabled)
 5) Upon completion flag the build as completed/failed 
+
+
+Download
+
+```
+# Create a folder
+$ mkdir actions-runner && cd actions-runner
+# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.283.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.283.1/actions-runner-linux-x64-2.283.1.tar.gz
+# Optional: Validate the hash
+$ echo "aebaaf7c00f467584b921f432f9f9fb50abf06e1b6b226545fbcbdaa65ed3031  actions-runner-linux-x64-2.283.1.tar.gz" | shasum -a 256 -c
+# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.283.1.tar.gz
+```
+
+Configure
+
+```
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/experientials/ziloo-firmware --token AAARXPURQOP2UPGXPACBBYLBM47XC
+# Last step, run it!
+$ ./run.sh
+```
+
+Using your self-hosted runner
+
+```
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+```
+
+For additional details about configuring, running, or shutting down the runner, please check out our product docs.

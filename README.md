@@ -16,6 +16,7 @@ Key building blocks are:
 Further instructions,
 
 - [Setting up Development environment](./docs/DEVELOP.md)
+- [Continuous Integration](./docs/CONTINUOUS_INTEGRATION.md)
 - [SD Card Format](./docs/DEVELOP.md#SD_Card_Format)
 - [Building with Docker](./docs/DEVELOP.md#SD_Card_Format#Docker)
 - [Alpine based](./docs/DEVELOP.md#SD_Card_Format#Alpine_based)

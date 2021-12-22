@@ -7,7 +7,7 @@ This is concerned with getting up and running on two carrier boards and later on
 - [SMARC Modules](https://sget.org/standards/)
 - 
 
-Source code and build scripts are found under [device/imx8](./device/imx8/README.md)
+Source code and build scripts are found under [device/imx8](../../device/imx8/README.md)
 
 ![SB-UCM-iMX8PLUS](./SB-UCMIMX8PLUS-carrier-board.jpg)
 

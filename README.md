@@ -20,7 +20,7 @@ Further instructions,
 - [SD Card Format](./docs/DEVELOP.md#SD_Card_Format)
 - [Building with Docker](./docs/DEVELOP.md#SD_Card_Format#Docker)
 - [Alpine based](./docs/DEVELOP.md#SD_Card_Format#Alpine_based)
-- [i.MX8 Yocto Docs](./docs/README.md)
+- [i.MX8 Yocto Docs](./docs/imx8/README.md)
 
 
 
